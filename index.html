@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Git e Github</title>
+    <link rel="stylesheet" type="text/css" href="styles.css" />
+  </head>
+  <body>
+    <h1>Git e Github</h1>
+
+    <section>
+      <h2 class="larger-text">O que é o GitHub?</h2>
+      <p>
+        O GitHub é uma plataforma onde você pode armazenar seus projetos. É como
+        se fosse uma rede social, só que de códigos, onde seus desenvolvedores
+        podem disponibilizá-los para outras pessoas verem.
+      </p>
+    </section>
+
+    <section>
+      <h2 class="larger-text">O que é o Git?</h2>
+      <p>
+        O Git é um sistema de controle de versão de arquivos. É um software
+        livre e muito utilizado no desenvolvimento de software onde diversas
+        pessoas estão contribuindo simultaneamente, podendo criar e editar
+        arquivos. Sempre quando alguém disponibiliza sua parte do projeto no
+        Git, ele gerencia as alterações feitas e guarda um histórico. Isso é
+        importante pois se houver algum problema você pode desfazer as
+        alterações e voltar para a versão que estava estável.
+      </p>
+
+      <div>
+        <h2 class="larger-text">Comando ADD e COMMIT</h2>
+        <p>
+          Comando para adicionar qualquer arquivo alterado no índice, ou seja,
+          adiciona como uma das alterações a serem armazenadas no commit.
+        </p>
+        <p>
+          <span>git add <i>nome_do_arquivo</i></span>
+        </p>
+
+        <p>
+          Depois de terminar as alterações, você faz o commit, dessa forma ajuda
+          a organizar sua evolução do código e organizar por tópicos (commits)
+        </p>
+        <p>
+          <span
+            >git commit -m
+            <i>“Adicione qualquer mensagem sobre o commit aqui”</i></span
+          >
+        </p>
+      </div>
+
+      <div>
+        <h2 class="larger-text">
+          Seu repositório foi clonado antes de começar o desenvolvimento?
+        </h2>
+        <p>
+          Se sim, na hora de enviar as alterações para o repositório remoto
+          (Github), basta seguir com o comando:
+        </p>
+
+        <p>
+          <span>git push <i>remote branch</i></span>
+        </p>
+      </div>
+
+      <div>
+        <h2 class="larger-text">Não foi vinculado ao Github ainda?</h2>
+        Se, no entanto, um repositório existente ainda não tiver sido clonado e
+        você pretende estabelecer uma ligação entre o seu repositório e um
+        servidor remoto, execute o seguinte comando:
+
+        <p>
+          <span>git remote add origin <i>servidor</i> </span>(Substitua servidor
+          pelo endereço do servidor remoto.)
+        </p>
+      </div>
+
+      <div>
+        <h2 class="larger-text">Branches</h2>
+        <p>
+          Outra característica brilhante (mas avançada) do GIT é sua capacidade
+          de permitir que desenvolvedores e gerentes de projeto criem vários
+          ramos (branches) independentes dentro de um único projeto.
+        </p>
+        <p>
+          Comando para CRIAR uma Branch:
+          <span>git checkout -b <i>nome_branch</i></span>
+        </p>
+        <p>
+          Comando para ir para outra branch:
+          <span
+            >git checkout
+            <i>nome_branch</i>
+          </span>
+        </p>
+      </div>
+
+      <div>
+        <h2>Fiz todas as alterações e quero disponibilizar no GitHub</h2>
+        <span>git push origin <i>nome_branch</i></span>
+      </div>
+
+      <h2>Casos comuns:</h2>
+      <p>
+        Houve uma alteração no Github e no meu repositório local (computador)
+        não está atualizado.
+      </p>
+      <p>
+        Nesse caso, utilizamos o comando <span>git pull</span>, ele faz com que
+        a BRANCH local pegue todas as alterações que estão no repositório
+        remoto.
+      </p>
+
+      <h2>Exemplo de um merge:</h2>
+      <p>
+        Nessa semana recebi uma tarefa que precisava criar um carrinho para o
+        projeto
+      </p>
+      <p>
+        Então eu fui até a main e a partir dela criei uma branch chamada
+        feature-cart.
+      </p>
+      <p>
+        Depois de uma semana, terminei meu desenvolvimento mas percebi que
+        entraram outras correções na main, e tenho um problema porque a minha
+        branch está desatualizada.
+      </p>
+
+      <p>Nesse caso vamos precisar utilizar o comando git merge</p>
+      <p>
+        Para isso, esteja na branch desatualizada (no exemplo é a feature-cart)
+        e adicione ao final do comando a branch que quer pegar as novas
+        alterações, exemplo:
+
+        <span>git merge <i>main</i></span
+        >, irá trazer todas as alterações da main para a minha branch atual
+      </p>
+    </section>
+  </body>
+</html>
